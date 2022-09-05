@@ -1,9 +1,7 @@
-name: deploy
-
-on: 
-    push:
-        branches:
-            - main
+name: Build and Deploy
+on: [push]
+permissions:
+  contents: write
 
 jobs:
     build:
