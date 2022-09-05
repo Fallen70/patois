@@ -27,9 +27,13 @@ jobs:
           shell: bash
           run: "pelican content -s publishconf.py -t theme/basic/ --relative-urls"
 
-        - name: Rm useless content
+        - name: Rm useless article content
           shell: bash
           run: "rm -rf output/content/*"
+
+        - name: Rm useless article content
+          shell: bash
+          run: "rm -rf output/patois*"
 
         - name: Check if we have everything
           shell: bash
