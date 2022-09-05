@@ -11,6 +11,6 @@ pip install pelican  markdown ghp-import
 ## build relatif 
 
 bash
-'''
+```
 pelican content/  -t theme/basic/ --relative-urls
-'''
+```
