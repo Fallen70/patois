@@ -29,41 +29,15 @@ jobs:
           shell: bash
           run: "pelican content -s publishconf.py -t theme/basic/ --relative-urls"
 
-        - name: Check if we have everything
-          shell: bash
-          run: "ls -la output/"
-
         - name: Rm useless content
           shell: bash
           run: "rm -rf output/content/*"
 
-        - name: Remove the existing file structure
-          uses: appleboy/ssh-action@master
-          with:
-              host: ${{ secrets.HOST }}
-              username: ${{ secrets.USER }}
-              key: ${{ secrets.SSHKEY }}
-              port: ${{ secrets.PORT }}
-              script: |
-                rm -rf /var/www/html/sitename/*
+        - name: Check if we have everything
+          shell: bash
+          run: "ls -la output/"
 
-        - name: Copy output via scp
-          uses: appleboy/scp-action@master
+        - name: Deploy
+          uses: JamesIves/github-pages-deploy-action@v4
           with:
-              host: ${{ secrets.HOST }}
-              username: ${{ secrets.USER }}
-              port: ${{ secrets.PORT }}
-              key: ${{ secrets.SSHKEY }}
-              source: "output/"
-              target: "/var/www/html/sitename"
-
-        - name: Copy output into site root
-          uses: appleboy/ssh-action@master
-          with:
-              host: ${{ secrets.HOST }}
-              username: ${{ secrets.USER }}
-              key: ${{ secrets.SSHKEY }}
-              port: ${{ secrets.PORT }}
-              script: |
-                mv /var/www/html/sitename/output/* /var/www/html/sitename/
-                rmdir /var/www/html/sitename/output
+            folder: output # The folder the action should deploy.
