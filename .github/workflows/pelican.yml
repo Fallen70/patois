@@ -35,7 +35,7 @@ jobs:
 
         - name: Rm useless content
           shell: bash
-          run: "rm -rf content/*"
+          run: "rm -rf output/content/*"
 
         - name: Remove the existing file structure
           uses: appleboy/ssh-action@master
