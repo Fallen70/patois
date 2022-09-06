@@ -2,9 +2,15 @@
 {% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
 
 {% block content %}
+  <h2>{{ category | capitalize }}</h2>
+  {% for tag, articles in tags | sort %}
+  <h3>{{ tag }}</h3>
   <ul class="vlist">
     {% for article in articles | sort(attribute='tri') %}
-    <li class="{{ loop.cycle('odd', 'even') }}" >{{ article.title }} = {{ article.trad }}</li>
+        {% if article.category == category %}
+            <li class="{{ loop.cycle('odd', 'even') }}" >{{ article.title }} = {{ article.trad }}</li>
+        {% endif %}
     {% endfor %}
   </ul>
+  {% endfor %}
 {% endblock %}
