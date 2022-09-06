@@ -3,7 +3,7 @@
 
 {% block content %}
   <ul class="vlist">
-    {% for article in articles | sort(attribute='title') %}
+    {% for article in articles | sort(attribute='tri') %}
     <li class="{{ loop.cycle('odd', 'even') }}" >{{ article.title }} = {{ article.trad }}</li>
     {% endfor %}
   </ul>

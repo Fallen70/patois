@@ -1,5 +1,5 @@
 AUTHOR = 'Fallen'
-SITENAME = 'Patois'
+SITENAME = 'Dictionnaire'
 SITEURL = ''
 
 PATH = 'content'
