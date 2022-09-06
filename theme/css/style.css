@@ -4,10 +4,8 @@ body {
   background-color: white;
   color: #111;
   width: 80%;
-  min-width: 400px;
-  min-height: 200px;
   padding: 1em;
-  margin: 5% 10%;
+  margin: 5%;
   border: thin solid gray;
   border-radius: 5px;
   display: block;
@@ -28,6 +26,48 @@ h6 a { color: inherit !important }
     display: inline;
 }
 
+.vlist {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  width: 100%;
+}
+
+.vlist li {
+  list-style-type: none;
+  padding: 5px;
+  width: 100%; /* auto spacing */
+}
+
+@media screen and (max-width: 768px) {
+  .vlist li { width: 100%; }
+}
+
+.vlist li.odd {
+  background: #B7999C;
+}
+
+.vlist li.even {
+  background: #DFE0E2;
+}
+
+.hlist {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+
+.hlist li {
+  list-style-type: none;
+  padding: 5px;
+  width: 100%; /* auto spacing */
+}
+
+@media screen and (max-width: 768px) {
+  .hlist li { width: 25%; }
+}
+
 #post-list {
     margin-bottom: 1em;
     margin-top: 1em;
@@ -37,3 +77,6 @@ pre {
     margin: 2em 1em 2em 4em;
 }
 
+footer {
+  padding: 5% 5% 2%;
+}
