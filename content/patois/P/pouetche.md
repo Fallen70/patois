@@ -1,6 +1,6 @@
-Title: Pau / Pô 
-Tri: Pau
+Title: Pouétche
+Tri: Pouétche
 Date: 2010-12-03 10:20
 Category: patois
 Tags: P
-Trad: Cochon
+Trad: Louche
