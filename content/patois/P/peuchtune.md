@@ -1,0 +1,6 @@
+Title: Peuchtune
+Tri: Peuchtune
+Date: 2010-12-03 10:20
+Category: patois
+Tags: P
+Trad: Du pus
