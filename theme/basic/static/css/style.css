@@ -11,6 +11,8 @@ body {
   display: block;
 }
 
+html { scroll-behavior: smooth; }
+
 a:link    { color: blue; text-decoration: none;      }
 a:hover   { color: blue; text-decoration: underline; }
 a:visited { color: blue;                             }
