@@ -38,11 +38,9 @@ def test_from_file(tmp_path):
     assert w.path == p
 
 
-def test_to_french_simple(aje):
+def test_to_french_aje(aje):
 
     words , errors = aje.to_french()
-    print( words, errors )
-    print( aje.__dict__)
     assert len(words) == 1
     assert len(errors) == 0
 
@@ -97,3 +95,23 @@ def test_to_french_no_category(aje):
     assert len(words) == 0
     assert len(errors) == 1
     assert errors == [aje.path]
+
+def test_to_french_beusse(beusse):
+
+    words , errors = beusse.to_french()
+    assert len(words) == 2
+    assert len(errors) == 0
+
+    w = words[0]
+    assert w.title == "Ruche"
+    assert w.tri == "Ruche"
+    assert w.tags == "R"
+    assert w.category == "français"
+    assert w.trad == "Beusse"
+
+    w = words[1]
+    assert w.title == "Tête"
+    assert w.tri == "Tête"
+    assert w.tags == "T"
+    assert w.category == "français"
+    assert w.trad == "Beusse"

@@ -43,11 +43,12 @@ class Word:
                 for key in ( k.lower() for k in KEYS )):
             return [],[self.path] 
         for trad in self.trad.split("/"):
+            trad = trad.strip().capitalize()
             new = dict()
-            new[TITLE.lower()] = trad.strip()
-            new[TRI.lower()] = trad.strip()
+            new[TITLE.lower()] = trad
+            new[TRI.lower()] = trad
             new[CATEGORY.lower()] = FRENCH
-            new[TAGS.lower()] = trad.capitalize()[0]
+            new[TAGS.lower()] = trad[0]
             new[TRAD.lower()] = self.title
             words.append( Word( **new ) )
         return words, errors
