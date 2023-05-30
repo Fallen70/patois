@@ -32,3 +32,18 @@ def beusse(tmp_path):
     w = Word.from_file(p)
     return w
 
+BEUILLOT = """Title: Beuillot
+Tri: Beuillot
+Date: 2010-12-03 10:20
+Category: patois
+Tags: B
+Trad: Lucarne / Œil-de-bœuf
+"""
+
+@pytest.fixture
+def beuillot(tmp_path):
+    p = tmp_path / "beuillot.md"
+    p.write_text(BEUILLOT)
+    w = Word.from_file(p)
+    return w
+

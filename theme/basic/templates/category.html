@@ -11,7 +11,7 @@
   {% for tag, articles in tags | sort %}
   <h3 id="{{ tag }}">{{ tag }} <a href="#">&#8593;</a> </h3>
   <ul class="vlist">
-    {% for article in articles | sort(attribute='tri') %}
+    {% for article in articles | sort(attribute='category,tri') %}
         {% if article.category == category %}
             <li class="{{ loop.cycle('odd', 'even') }}" >{{ article.title }} = {{ article.trad }}</li>
         {% endif %}

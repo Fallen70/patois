@@ -115,3 +115,23 @@ def test_to_french_beusse(beusse):
     assert w.tags == "T"
     assert w.category == "français"
     assert w.trad == "Beusse"
+
+def test_to_french_beuillot(beuillot):
+
+    words , errors = beuillot.to_french()
+    assert len(words) == 2
+    assert len(errors) == 0
+
+    w = words[0]
+    assert w.title == "Lucarne"
+    assert w.tri == "Lucarne"
+    assert w.tags == "L"
+    assert w.category == "français"
+    assert w.trad == "Beuillot"
+
+    w = words[1]
+    assert w.title == "Œil-de-bœuf"
+    assert w.tri == "Œil-de-bœuf"
+    assert w.tags == "O"
+    assert w.category == "français"
+    assert w.trad == "Beuillot"
