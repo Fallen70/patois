@@ -1,7 +1,7 @@
 Title: Une personne
- Tri: Une personne
+ Tri: personne
  Date: 2010-12-03 10:20
  Category: français
- Tags: U
+ Tags: P
  Trad: Une gens
  
