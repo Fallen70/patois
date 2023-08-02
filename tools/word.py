@@ -83,6 +83,7 @@ class Word:
             # We don't want to update the tri field if there is no major change
             current = Word.from_file( self.path )
             if current == self :
+                print( f"{self.path} already up to date" )
                 return
         save_file = open( self.path, 'w' )
         save_file.write( f"""Title: {self.title}
