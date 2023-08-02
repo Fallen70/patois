@@ -1,7 +1,7 @@
 Title: Etre vaniteux
- Tri: Etre vaniteux
+ Tri: Vaniteux
  Date: 2010-12-03 10:20
  Category: français
- Tags: E
+ Tags: V
  Trad: Se croire
  
