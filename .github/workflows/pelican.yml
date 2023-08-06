@@ -38,6 +38,10 @@ jobs:
           shell: bash
           run: "rm -rf output/patois*"
 
+        - name: Rm useless article content
+          shell: bash
+          run: "rm -rf output/francais*"
+
         - name: Check if we have everything
           shell: bash
           run: "ls -la output/"
